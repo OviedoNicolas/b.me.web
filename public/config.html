@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/assets/css/styles.css">
+    <title>Config</title>
+</head>
+<body class="config__body">
+    <header id="config__header">
+        <div class="header__logo--container">
+            <img src="../public/assets/img/Logo blanco-10.svg" alt="">
+        </div>
+        <nav>
+            <a href="">INGRESAR</a>
+            <a href="">CREAR AHORA</a>
+            <a class="header__redes" href="">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a class="header__redes" href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="header__redes" href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+        </nav>
+    </header>
+    <div class="config__background">
+        <img src="../public/assets/img/background-1_b.jpg" alt="">
+    </div>
+    <main class="config__main">
+        <h1>Configuración Inicial</h1>
+        <section class="config__container">
+            <div class="config__container--titulo">
+                <p class="config__titulo--num">1</p>
+                <div>
+                    <p>PASO <span>1</span></p>
+                    <h2>Cargá los datos de tu empresa</h2>
+                </div>
+            </div>
+            <div class="config__container--body">
+                <div class="config__pasos--container">
+                    <div class="paso paso1">
+                        <div class="config__pasos--img img__paso1">
+                            <img src="../public/assets/img/IconosPasos-1.png" alt="">
+                        </div>
+                        <form class="config__form" autoComplete="off">
+                            <div class="input-container">
+                                <input 
+                                type="text" 
+                                class="config__form--input" 
+                                name="name" 
+                                placeholder=" "
+                                required 
+                                id="name">
+                                <label for="name" class="input-label">Tu marca / nombre de fantasía</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text"
+                                name="url"
+                                class="config__form--input"
+                                placeholder=" "
+                                value=""
+                                disabled
+                                id="url">
+                                <label for="name" class="input-label">Dirección de tu tienda virtual</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text"
+                                class="config__form--input"
+                                name="what"
+                                placeholder=" "
+                                required
+                                id="what">
+                                <label for="name" class="input-label">Whatsapp (para que te contacten)</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" 
+                                class="config__form--input"
+                                name="address"
+                                placeholder=" "
+                                required
+                                id="address">
+                                <label for="name" class="input-label">Dirección (donde ofrecés los servicios)</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" 
+                                class="config__form--input"
+                                name="floor"
+                                placeholder=" "
+                                id="floor">
+                                <label for="name" class="input-label">Piso / departamento</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" 
+                                class="config__form--input"
+                                name="city"
+                                placeholder=" "
+                                required
+                                id="city">
+                                <label for="name" class="input-label">Ciudad / barrio</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" 
+                                class="config__form--input"
+                                name="state"
+                                placeholder=" "
+                                required
+                                id="state">
+                                <label for="name" class="input-label">Provincia</label>
+                            </div>
+                            <button class="btn unselectable" type="button" onclick=crearTienda()>
+                                Continuar
+                                <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="paso paso2">
+                        <div class="config__pasos--img img__paso2">
+                            <img src="../public/assets/img/IconosPasos-2.png" alt="">
+                        </div>
+                        <div class="paso2__container">
+                            <div class="file__upload--container">
+                                <label for="file__upload">
+                                    <img src="" alt="Seleccionar archivo">
+                                </label>
+                                <input id="file__upload" type="file" accept=".jpg, .png, .gif">
+                            </div>
+                            <h3>Tu marca</h3>
+                            <p>Es momento de subir el logo o una imagen que te caracterice.<br><span>(Si no tenés uno a mano, podés agregarlo más tarde, mientras tanto utilizaremos el nuestro).</span></p>
+                        </div>
+                        <div class="botones__container">
+                            <button id="sub" class="boton__subir">Subir logo</button>
+                            <button id="omi" class="boton__omitir">Omitir paso</button>
+                        </div>
+                    </div>
+                    <div class="paso paso3">
+                        <div class="config__pasos--img img__paso3">
+                            <img src="../public/assets/img/IconosPasos-3.png" alt="">
+                        </div>
+                        <p>Ahora vamos a posicionar tu ubicación en el mapa <span>(el lugar donde brindás los servicios)</span>, para que puedan encontrarte por cercanía tus potenciales nuevos clientes.</p>
+                        <div class="mapa__container">
+                            map
+                        </div>
+                        <button>
+                            Siguiente
+                            <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="paso paso4">
+                        <div class="config__pasos--img img__paso4">
+                            <img src="../public/assets/img/IconosPasos-4.png" alt="">
+                        </div>
+                        <div class="dias__container">
+                            <div class="select" data-left="7">
+                                <p>Lun</p>
+                            </div>
+                            <div data-left="21">
+                                <p>Mar</p>
+                            </div>
+                            <div data-left="34">
+                                <p>Mié</p>
+                            </div>
+                            <div data-left="48">
+                                <p>Jue</p>
+                            </div>
+                            <div data-left="61">
+                                <p>Vie</p>
+                            </div>
+                            <div data-left="74">
+                                <p>Sáb</p>
+                            </div>
+                            <div data-left="87">
+                                <p>Dom</p>
+                            </div>
+                        </div>
+                        <div class="agenda__container">
+                            <h3>Lunes</h3>
+                            <div class="agenda__select">
+                                <div class="select__container">
+                                    <p>Desde</p>
+                                    <select id="select__hora--desde" required>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                    </select>
+                                    <p>:</p>
+                                    <select id="select__minuto--desde" required>
+                                        <option value="00">00</option>
+                                        <option value="15">15</option>
+                                        <option value="30">30</option>
+                                        <option value="45">45</option>
+                                    </select>
+                                </div>
+                                <div class="select__container">
+                                    <p>Hasta</p>
+                                    <select id="select__hora--hasta" required>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                    </select>
+                                    <p>:</p>
+                                    <select id="select__minuto--hasta" required>
+                                        <option value="00">00</option>
+                                        <option value="15">15</option>
+                                        <option value="30">30</option>
+                                        <option value="45">45</option>
+                                    </select>
+                                </div>
+                                <button>Agregar</button>
+                            </div>
+                            <button class="agenda__boton--sumar">+</button>
+                        </div>
+                        <div class="agenda__resumen--container">
+                            <h3>Tus rangos horarios semanales</h3>
+                            <div class="agenda__resumen--lista">
+                                <h4>Lunes</h4>
+                                <div>
+                                    <p>Desde las 08:30am, hasta las 13:30pm.</p>
+                                    <p>Desde las 17:00am, hasta las 21:30pm.</p>
+                                </div>
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <div class="agenda__resumen--lista">
+                                <h4>Martes</h4>
+                                <div>
+                                    <p>Desde las 08:30am, hasta las 20:30pm.</p>
+                                </div>
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paso paso5">
+                        <div class="config__pasos--img img__paso5">
+                            <img src="../public/assets/img/IconosPasos-5.png" alt="">
+                        </div>
+                        <div class="categoria__container">
+                            <h3>Categoría</h3>
+                            <select name="Categoría" id="Categoría">
+                                <option value="peluqueria">Peluqueria</option>
+                                <option value="unas">Uñas</option>
+                            </select>
+                            <input                             
+                            type="text"
+                            class="config__form--input"
+                            name="servicio"
+                            placeholder="Título del servicio"
+                            required
+                            autoFocus
+                            id="servicio">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <div>
+                                <div>
+                                    <p>Tiempo estimado</p>
+                                </div>
+                                <div>
+                                    <p>$</p>
+                                    <input 
+                                    type="text"
+                                    placeholder="Precio">
+                                </div>
+                            </div>
+                            <button>Cargar</button>
+                        </div>
+                        <div class="categoria__resumen--container">
+                            <h3>Tus servicios</h3>
+                            <div class="categoria__resumen--solapa">
+                                <p>Peluqueria</p>
+                            </div>
+                            <div class="categoria__resumen--lista">
+                                <p>Corte</p>
+                                <p>Descripcion</p>
+                                <p>2H 30min</p>
+                                <p>$1000.00</p>
+                                <div>
+                                    <button>
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </button>
+                                    <button>X</button>
+                                </div>
+                            </div>
+
+
+                            <div class="categoria__resumen" id="categoriaResumen">
+                                <div class="categoria__resumen--pestañas">
+                                    <button class="pestaña selec" data-numero="1">Peluqueria</button>
+                                    <button class="pestaña" data-numero="2">Uñas</button>
+                                    <button class="pestaña" data-numero="3">Pestañas</button>
+                                    <button class="pestaña" data-numero="4">Depilacion</button>
+                                </div>
+                                <div class="categoria__resumen--lista--container">
+                                    <div class="categoria__resumen--content block" data-pestaña="1">
+                                        <div class="categoria__resumen--lista">
+                                            <p>Corte</p>
+                                            <p>Descripcion</p>
+                                            <p>1H 00min</p>
+                                            <p>$1000.00</p>
+                                            <div>
+                                                <button>
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </button>
+                                                <button>X</button>
+                                            </div>
+                                        </div>
+                                        <div class="categoria__resumen--lista">
+                                            <p>Tintura</p>
+                                            <p>Descripcion</p>
+                                            <p>1H 30min</p>
+                                            <p>$2000.00</p>
+                                            <div>
+                                                <button>
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </button>
+                                                <button>X</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="categoria__resumen--content" data-pestaña="2">
+                                        <div class="categoria__resumen--lista">
+                                            <p>Permanente</p>
+                                            <p>Descripcion</p>
+                                            <p>2H 00min</p>
+                                            <p>$3000.00</p>
+                                            <div>
+                                                <button>
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </button>
+                                                <button>X</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="categoria__resumen--content" data-pestaña="3">
+                                        <div class="categoria__resumen--lista">
+                                            <p>Corte</p>
+                                            <p>Descripcion</p>
+                                            <p>2H 30min</p>
+                                            <p>$1000.00</p>
+                                            <div>
+                                                <button>
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </button>
+                                                <button>X</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="categoria__resumen--content" data-pestaña="4">
+                                        <div class="categoria__resumen--lista">
+                                            <p>Corte</p>
+                                            <p>Descripcion</p>
+                                            <p>2H 30min</p>
+                                            <p>$1000.00</p>
+                                            <div>
+                                                <button>
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </button>
+                                                <button>X</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--
+                                container = categoria__resumen
+                                header = categoria__resumen--pestañas
+                                btn = pestaña
+                                content = categoria__resumen--lista--container
+                                content_text = categoria__resumen--content
+                            -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/box-alert.js"></script>
+</body>
+</html>
