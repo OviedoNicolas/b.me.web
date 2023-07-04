@@ -61,7 +61,6 @@ function showAlert(_title, _text, _time = 0, _type = "", _but_ok = null, _but_ca
     }
 }
 
-
 const togglePwV = (inputId, iconId) => {
     const input = document.getElementById(inputId);
     const icon = document.getElementById(iconId);

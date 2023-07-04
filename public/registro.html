@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="body">
+    <div class="background">
+        <img src="assets/img/background-1.jpg" alt="">
+    </div>
+    <main class="main">
+        <div class="logo">
+            <img src="assets/img/Logo blanco-10.svg" alt="">
+        </div>
+        <div class="main__container">
+            <div class="main__img">
+                <img src="assets/img/intro-registro.svg" alt="">
+            </div>
+            <form class="form"
+            autoComplete="off">
+                <div class="form__container">
+                    <input
+                    class="form__input" 
+                    type="text"
+                    name="apellido"
+                    placeholder=" "
+                    id="inp_ape">
+                    <label for="apellido" class="form__label">Apellido</label>
+                </div>
+                <div class="form__container">
+                    <input
+                    class="form__input" 
+                    type="text"
+                    name="nombre"
+                    placeholder=" "
+                    id="inp_nom">
+                    <label for="nombre" class="form__label">Nombres</label>
+                </div>
+                <div class="form__container">
+                    <input
+                    class="form__input" 
+                    type="email"
+                    name="email"
+                    placeholder=" "
+                    id="inp_em">
+                    <label for="email" class="form__label">E-mail</label>
+                </div>
+                <div class="form__container">
+                    <input
+                    class="form__input" 
+                    type="password"
+                    name="password"
+                    placeholder=" "
+                    id="inp_pw">
+                    <label for="password" class="form__label">Contraseña</label>
+                    <button class="form__toggle unselectable" type="button" onclick="togglePwV('inp_pw', 'icon_pw')">
+                        <i id="icon_pw" class="form__icono fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="form__container">
+                    <input
+                    class="form__input" 
+                    type="password"
+                    name="con_password"
+                    placeholder=" "
+                    id="inp_cpw">
+                    <label for="con_password" class="form__label">Confirmar contraseña</label>
+                    <button class="form__toggle unselectable" type="button" onclick="togglePwV('inp_cpw', 'icon_cpw')">
+                        <i id="icon_cpw" class="form__icono fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <button class="btn unselectable" onclick=click_registro() type="button">
+                    <i class="fa fa-id-card-o fa-lg" aria-hidden="true"></i>
+                    REGISTRARME
+                </button>
+            </form>
+        </div>
+    </main>
+    <div id="Alert" class="div-mainalert animated slideInDown unselectable" 
+    style="z-index:10100;text-align:center;display:none;" >
+        <div class="div-alert" >
+            <div id="Alert-title" class="div-alert-title" style='margin:20px;'>
+            </div>
+            <div id="Alert-content" style='margin:20px;font-size:17px;'>
+            </div>
+            <div id="div_alert_buttons" class="div-alert-buttons">
+                <button id="alert_btn_ok" class="boton-alertconfirmar" style='margin:30px;'>ACEPTAR</button>
+                <button id="alert_btn_cancel" onclick='hideAlert();' class="boton-alertconfirmar" style='margin:30px;'>Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/registro.js"></script>
+    <script src="assets/js/box-alert.js"></script>
+</body>
+</html>

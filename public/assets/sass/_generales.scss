@@ -23,18 +23,123 @@ a{
     text-decoration: none;
 }
 
+.block{
+    display: block !important;
+}
 
 .hidden{
     display: none !important;
 }
 
-@mixin toggle-button-style {
-    position: absolute;
-    right: 0;
-    padding: 0px 10px;
-    font-size: 19px;
-    margin-top: 3px;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
+.body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
+.background {
+    overflow: hidden;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+}
+
+.main{
+    width: 80%;
+    max-width: 770px;
+    margin-top: 60px;
+}
+
+.main__titulo{
+    font-size: 60px;
+}
+
+.main__container{
+    background-color: $claro;
+    border-radius: 25px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.main__img{
+    width: 50%;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 15px;
+}
+
+.form__container{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.form__input{
+    width: 100%;
+    border: 1px solid $gris;
+    padding: 18px 15px 2px 20px;
+    border-radius: 50px;
+    color: $gris;
+    font-size: 16px;
+
+    &:focus{
+        outline: 1px solid $gris ;
+    }
+}
+
+.form__label{
+    position: absolute;
+    top: 49%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: $gris;
+    pointer-events: none;
+    transition: 0.175s ease-out;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    top: 12px;
+    left: 20px;
+    font-size: 12px;
+    color: $rosa_principal;
+}
+
+.form__toggle{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: none;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.form__icono{
+    font-size: 16px;
+    color: $rosa_principal;
+}
+
+// @mixin toggle-button-style {
+//     position: absolute;
+//     right: 0;
+//     padding: 0px 10px;
+//     font-size: 19px;
+//     margin-top: 3px;
+//     border: none;
+//     cursor: pointer;
+//     background-color: transparent;
+// }

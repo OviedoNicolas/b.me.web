@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Config</title>
 </head>
-<body class="config__body">
-    <header id="config__header">
+<body class="body">
+    <!-- <header id="config__header">
         <div class="header__logo--container">
-            <img src="../public/assets/img/Logo blanco-10.svg" alt="">
+            <img src="assets/img/Logo blanco-10.svg" alt="">
         </div>
         <nav>
             <a href="">INGRESAR</a>
@@ -26,12 +27,12 @@
                 <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
         </nav>
-    </header>
-    <div class="config__background">
-        <img src="../public/assets/img/background-1_b.jpg" alt="">
+    </header> -->
+    <div class="background">
+        <img src="assets/img/background-1.jpg" alt="">
     </div>
-    <main class="config__main">
-        <h1>Configuración Inicial</h1>
+    <main class="main">
+        <h1 class="main__titulo">Configuración Inicial</h1>
         <section class="config__container">
             <div class="config__container--titulo">
                 <p class="config__titulo--num">1</p>
@@ -44,7 +45,7 @@
                 <div class="config__pasos--container">
                     <div class="paso paso1">
                         <div class="config__pasos--img img__paso1">
-                            <img src="../public/assets/img/IconosPasos-1.png" alt="">
+                            <img src="assets/img/IconosPasos-1.png" alt="">
                         </div>
                         <form class="config__form" autoComplete="off">
                             <div class="input-container">
@@ -119,7 +120,7 @@
                     </div>
                     <div class="paso paso2">
                         <div class="config__pasos--img img__paso2">
-                            <img src="../public/assets/img/IconosPasos-2.png" alt="">
+                            <img src="assets/img/IconosPasos-2.png" alt="">
                         </div>
                         <div class="paso2__container">
                             <div class="file__upload--container">
@@ -138,7 +139,7 @@
                     </div>
                     <div class="paso paso3">
                         <div class="config__pasos--img img__paso3">
-                            <img src="../public/assets/img/IconosPasos-3.png" alt="">
+                            <img src="assets/img/IconosPasos-3.png" alt="">
                         </div>
                         <p>Ahora vamos a posicionar tu ubicación en el mapa <span>(el lugar donde brindás los servicios)</span>, para que puedan encontrarte por cercanía tus potenciales nuevos clientes.</p>
                         <div class="mapa__container">
@@ -151,28 +152,28 @@
                     </div>
                     <div class="paso paso4">
                         <div class="config__pasos--img img__paso4">
-                            <img src="../public/assets/img/IconosPasos-4.png" alt="">
+                            <img src="assets/img/IconosPasos-4.png" alt="">
                         </div>
                         <div class="dias__container">
-                            <div class="select" data-left="7">
+                            <div class="select" data-left="7" data-id="1">
                                 <p>Lun</p>
                             </div>
-                            <div data-left="21">
+                            <div data-left="21" data-id="2">
                                 <p>Mar</p>
                             </div>
-                            <div data-left="34">
+                            <div data-left="34" data-id="3">
                                 <p>Mié</p>
                             </div>
-                            <div data-left="48">
+                            <div data-left="48" data-id="4">
                                 <p>Jue</p>
                             </div>
-                            <div data-left="61">
+                            <div data-left="61" data-id="5">
                                 <p>Vie</p>
                             </div>
-                            <div data-left="74">
+                            <div data-left="74" data-id="6">
                                 <p>Sáb</p>
                             </div>
-                            <div data-left="87">
+                            <div data-left="87" data-id="0">
                                 <p>Dom</p>
                             </div>
                         </div>
@@ -235,15 +236,14 @@
                                         <option value="45">45</option>
                                     </select>
                                 </div>
-                                <button>Agregar</button>
+                                <button id="btnAgregar">Agregar</button>
                             </div>
-                            <button class="agenda__boton--sumar">+</button>
                         </div>
                         <div class="agenda__resumen--container">
                             <h3>Tus rangos horarios semanales</h3>
                             <div class="agenda__resumen--lista">
                                 <h4>Lunes</h4>
-                                <div>
+                                <div class="agenda__resumen--rangos">
                                     <p>Desde las 08:30am, hasta las 13:30pm.</p>
                                     <p>Desde las 17:00am, hasta las 21:30pm.</p>
                                 </div>
@@ -260,13 +260,11 @@
                     </div>
                     <div class="paso paso5">
                         <div class="config__pasos--img img__paso5">
-                            <img src="../public/assets/img/IconosPasos-5.png" alt="">
+                            <img src="assets/img/IconosPasos-5.png" alt="">
                         </div>
                         <div class="categoria__container">
                             <h3>Categoría</h3>
                             <select name="Categoría" id="Categoría">
-                                <option value="peluqueria">Peluqueria</option>
-                                <option value="unas">Uñas</option>
                             </select>
                             <input                             
                             type="text"
@@ -403,6 +401,19 @@
                 </div>
             </div>
         </section>
+        <div id="Alert" class="div-mainalert animated slideInDown unselectable" 
+        style="z-index:10100;text-align:center;display:none;" >
+            <div class="div-alert" >
+                <div id="Alert-title" class="div-alert-title" style='margin:20px;'>
+                </div>
+                <div id="Alert-content" style='margin:20px;font-size:17px;'>
+                </div>
+                <div id="div_alert_buttons" class="div-alert-buttons">
+                    <button id="alert_btn_ok" class="boton-alertconfirmar" style='margin:30px;'>ACEPTAR</button>
+                    <button id="alert_btn_cancel" onclick='hideAlert();' class="boton-alertconfirmar" style='margin:30px;'>Aceptar</button>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="./assets/js/config.js"></script>
     <script src="./assets/js/box-alert.js"></script>

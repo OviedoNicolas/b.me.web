@@ -28,15 +28,113 @@ a {
   text-decoration: none;
 }
 
+.block {
+  display: block !important;
+}
+
 .hidden {
   display: none !important;
 }
 
-.config__body {
+.body {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.background {
+  overflow: hidden;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+}
+
+.main {
+  width: 80%;
+  max-width: 770px;
+  margin-top: 60px;
+}
+
+.main__titulo {
+  font-size: 60px;
+}
+
+.main__container {
+  background-color: #F4F4F4;
+  border-radius: 25px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.main__img {
+  width: 50%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 15px;
+}
+
+.form__container {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.form__input {
+  width: 100%;
+  border: 1px solid #9A9AA0;
+  padding: 18px 15px 2px 20px;
+  border-radius: 50px;
+  color: #9A9AA0;
+  font-size: 16px;
+}
+.form__input:focus {
+  outline: 1px solid #9A9AA0;
+}
+
+.form__label {
+  position: absolute;
+  top: 49%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #9A9AA0;
+  pointer-events: none;
+  transition: 0.175s ease-out;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  top: 12px;
+  left: 20px;
+  font-size: 12px;
+  color: #EAA79F;
+}
+
+.form__toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.form__icono {
+  font-size: 16px;
+  color: #EAA79F;
 }
 
 #config__header {
@@ -77,25 +175,6 @@ a {
 
 .header__logo--container {
   width: 250px;
-}
-
-.config__background {
-  overflow: hidden;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  position: absolute;
-  top: 116px;
-  z-index: -1;
-  height: 69vh;
-}
-
-.config__main {
-  width: 80%;
-  max-width: 770px;
-  margin-top: 60px;
-}
-.config__main h1 {
-  font-size: 60px;
 }
 
 .config__container {
@@ -163,7 +242,7 @@ a {
 .config__form input {
   width: 100%;
   border: 1px solid #9A9AA0;
-  padding: 20px 15px 0px 20px;
+  padding: 18px 15px 2px 20px;
   border-radius: 50px;
   color: #9A9AA0;
   font-size: 16px;
@@ -234,6 +313,10 @@ a {
 .paso2__container p span {
   color: #9A9AA0;
   font-size: 14px;
+}
+
+.paso2, .paso3, .paso4, .paso5 {
+  display: none;
 }
 
 #file__upload {
@@ -536,10 +619,6 @@ h3 {
   display: none;
 }
 
-.block {
-  display: block !important;
-}
-
 #loader {
   position: relative;
   height: 50px;
@@ -554,7 +633,7 @@ h3 {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  background-color: #986c79;
+  background-color: #EAA79F;
   animation: load 1s linear infinite;
   transform: scale(0);
   opacity: 0;
