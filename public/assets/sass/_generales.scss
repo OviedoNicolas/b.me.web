@@ -6,6 +6,24 @@
     color: $claro;
 }
 
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+h3{
+    color: $rosa_principal;
+}
+
+h4{
+    color: $rosa_principal;
+    font-size: 16px;
+    font-weight: 500;
+}
+
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -15,12 +33,9 @@
     user-select: none;
 }
 
-img{
-    width: 100%;
-}
-
-a{
-    text-decoration: none;
+.logo{
+    width: 60%;
+    margin: auto;
 }
 
 .block{
@@ -53,21 +68,55 @@ a{
 }
 
 .main__titulo{
-    font-size: 60px;
+    font-size: 70px;
 }
 
 .main__container{
     background-color: $claro;
     border-radius: 25px;
-    margin-top: 40px;
+    margin: 40px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    box-shadow: 1px 3px 10px $gris;
 }
 
 .main__img{
     width: 50%;
+    margin: 40px 0px;
+}
+
+.encabezado{
+    background-color: $azul;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+
+.encabezado__numero{
+    border: 2px solid $blanco;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 6px #1b1b2d;
+    font-weight: 600;
+}
+
+.encabezado__titulo{
+    font-size: 24px;
+}
+
+.encabezado__paso{
+    font-size: 20px;
+    font-weight: 200;
 }
 
 .form{
@@ -117,7 +166,7 @@ a{
     color: $rosa_principal;
 }
 
-.form__toggle{
+.form__icono{
     position: absolute;
     width: 20px;
     height: 20px;
@@ -126,11 +175,34 @@ a{
     right: 15px;
     background-color: transparent;
     cursor: pointer;
-}
-
-.form__icono{
     font-size: 16px;
     color: $rosa_principal;
+}
+
+.btn__container{
+    padding: 30px;
+    width: 80%;
+    display: flex;
+    gap: 10px;
+}
+
+.btn{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: $azul;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    outline: none;
+}
+
+.btn--rosa{
+    background-color: $rosa_principal;
 }
 
 // @mixin toggle-button-style {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -18,7 +18,7 @@
         </div>
         <div class="main__container">
             <div class="main__img">
-                <img src="assets/img/intro-registro.svg" alt="">
+                <img src="assets/img/intro-login.svg" alt="">
             </div>
             <form class="form"
             autoComplete="off">
@@ -26,28 +26,10 @@
                     <input
                     class="form__input" 
                     type="text"
-                    name="apellido"
-                    placeholder=" "
-                    id="inp_ape">
-                    <label for="apellido" class="form__label">Apellido</label>
-                </div>
-                <div class="form__container">
-                    <input
-                    class="form__input" 
-                    type="text"
-                    name="nombre"
-                    placeholder=" "
-                    id="inp_nom">
-                    <label for="nombre" class="form__label">Nombres</label>
-                </div>
-                <div class="form__container">
-                    <input
-                    class="form__input" 
-                    type="email"
-                    name="email"
+                    name="usuario"
                     placeholder=" "
                     id="inp_em">
-                    <label for="email" class="form__label">E-mail</label>
+                    <label for="usuario" class="form__label">E-mail</label>
                 </div>
                 <div class="form__container">
                     <input
@@ -59,18 +41,8 @@
                     <label for="password" class="form__label">Contraseña</label>
                     <i onclick="togglePwV('inp_pw', 'icon_pw')"  id="icon_pw" class="unselectable form__icono fa fa-eye" aria-hidden="true"></i>
                 </div>
-                <div class="form__container">
-                    <input
-                    class="form__input" 
-                    type="password"
-                    name="con_password"
-                    placeholder=" "
-                    id="inp_cpw">
-                    <label for="con_password" class="form__label">Confirmar contraseña</label>
-                    <i onclick="togglePwV('inp_cpw', 'icon_cpw')" id="icon_cpw" class="unselectable form__icono fa fa-eye" aria-hidden="true"></i>
-                </div>
-                <button class="btn unselectable" onclick=click_registro() type="button">
-                    REGISTRARME
+                <button class="btn unselectable" onclick=click_login() type="button">
+                    INGRESAR
                 </button>
             </form>
         </div>
@@ -89,7 +61,7 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/registro.js"></script>
+    <script src="assets/js/login.js"></script>
     <script src="assets/js/box-alert.js"></script>
 </body>
 </html>

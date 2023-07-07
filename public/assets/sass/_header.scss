@@ -1,0 +1,45 @@
+#config__header{
+    background-color: #EAA79F;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px;
+    width: 100%;
+
+    nav{
+        display: flex;
+        gap: 25px;
+
+        a{
+            padding: 10px;
+            border: 2px solid $claro;
+            border-radius: 50px;
+            width: 175px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .fa{
+                font-size: 24px;
+            }
+
+            &:hover{
+                color: $rosa_principal;
+                background-color: $claro;
+
+                i{
+                    color: $rosa_principal;
+                }
+            }
+        }
+
+        .header__redes{
+            width: 50px;
+        }
+    }
+}
+
+.header__logo--container{
+    width: 250px;
+}
