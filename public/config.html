@@ -34,6 +34,17 @@
     <main class="main">
         <h1 class="main__titulo">Configuración Inicial</h1>
         <section class="main__container">
+            <div class="pasos__container paso0">
+                <p class="paso0__titulo">Tenemos que completar algunos datos para que tu tienda se pueda ver online.</p>
+                <p class="pasos__texto">En unos pocos pasos vas a tener todo listo <br>(podés continuar con la carga en cualquier momento)</p>
+                <div class="paso0__img">
+                    <img src="assets/img/config-card.svg" alt="">
+                </div>
+                <button class="btn">
+                    Comenzar
+                    <i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>
+                </button>
+            </div>
             <div class="encabezado">
                 <p class="encabezado__numero">1</p>
                 <div>
@@ -282,6 +293,7 @@
                             <div class="tiempo__selectCont tiempo__selectCont--L">
                                 <p class="tiempo__selectTit">Tiempo estimado</p>
                                 <select class="tiempo__select" id="tiempoHoras" required>
+                                    <option class="tiempo__option" value="00">00</option>
                                     <option class="tiempo__option" value="01">01</option>
                                     <option class="tiempo__option" value="02">02</option>
                                     <option class="tiempo__option" value="03">03</option>

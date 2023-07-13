@@ -3,10 +3,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    // display: none;
 }
 
 .pasos__img{
-    width: 300px;
+    width: 50%;
+    max-width: 300px;
     margin-top: 25px;
 }
 
@@ -17,15 +19,67 @@
     width: 100%;
 }
 
+.paso0{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title img"
+                        "texto img"
+                        "boton img";
+    padding: 75px 50px;
+    padding: clamp(25px, 5vw, 75px) clamp(20px, 5vw, 50px);
+
+    @media only screen and (max-width: 990px){
+        grid-template-columns: 1fr;
+        grid-template-areas: "img"
+                            "title"
+                            "texto"
+                            "boton";
+        gap: 15px;
+    }
+
+    .btn{
+        grid-area: boton;
+    }
+}
+
+.paso0__img{
+    grid-area: img;
+
+    @media only screen and (max-width: 990px){
+        width: 60%;
+        justify-self: center;
+    }
+}
+
+.paso0__titulo{
+    color: $rosa_principal;
+    grid-area: title;
+    font-size: $titulo-l;
+    font-weight: 600;
+
+    @media only screen and (max-width: 990px){
+        text-align: center;
+    }
+}
+
 .paso2__container{
     display: grid;
     align-items: center;
-    margin-top: 30px;
+    margin-top: clamp(8px, 2vw, 40px);
     width: 80%;
-    padding: 40px;
+    padding: clamp(7px, 2vw, 30px);
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "file title"
                         "file texto";
+
+    @media only screen and (max-width: 990px){
+        grid-template-columns: 1fr;
+        grid-template-areas: "title"
+                            "texto"
+                            "file";
+        gap: 15px;
+        justify-items: center;
+    }
 }
 
 .paso2__file{
@@ -37,24 +91,32 @@
 .paso2__titulo{
     grid-area: title;
     color: $rosa_principal;
-    font-size: 24px;
+    font-size: $titulo-l;
 }
 
 .pasos__texto{
     color: $gris;
-    font-size: 18px;
+    font-size: $texto-l;
     grid-area: texto;
+
+    @media only screen and (max-width: 990px){
+        text-align: center;
+    }
 
     span{
         color: $gris;
-        font-size: 14px;
+        font-size: $texto-span;
     }
 }
 
 .paso3{
     width: 80%;
-    padding: 40px;
-    gap: 30px;
+    padding: clamp(11px, 3vw, 40px);
+    gap: clamp(10px, 3vw , 30px);
+
+    .pasos__img{
+        width: 70%;
+    }
 }
 
 .dias{
@@ -158,10 +220,6 @@
 .tiempo__option{
     color: $rosa_principal;
     background-color: $blanco;
-
-    &:hover{
-        font-size: 50px;
-    }
 }
 
 .resumen{
@@ -323,9 +381,15 @@
 
 
 
-// .paso1, .paso2, .paso3, .paso4{
+// .paso0,  .paso1, .paso2, .paso4, .paso5, .encabezado{
 //     display: none;
 // }
+
+
+.paso4, .paso5{
+    display: none;
+}
+
 
 // categoria__container = categoria
 // select = + categoria__select

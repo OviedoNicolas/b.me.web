@@ -17,11 +17,12 @@ a {
 
 h3 {
   color: #EAA79F;
+  font-size: clamp(14px, 3vw, 18px);
 }
 
 h4 {
   color: #EAA79F;
-  font-size: 16px;
+  font-size: clamp(12px, 3vw, 16px);
   font-weight: 500;
 }
 
@@ -59,23 +60,24 @@ h4 {
   border-bottom-right-radius: 100px;
   position: absolute;
   z-index: -1;
-  height: 100vh;
+  height: clamp(25vh, 65vw, 100vh);
 }
 
 .main {
   width: 80%;
   max-width: 770px;
-  margin-top: 60px;
+  margin-top: clamp(30px, 5vw, 60px);
 }
 
 .main__titulo {
-  font-size: 70px;
+  font-size: clamp(35px, 5vw, 70px);
+  text-align: center;
 }
 
 .main__container {
   background-color: #F4F4F4;
   border-radius: 25px;
-  margin: 40px 0px;
+  margin: clamp(20px, 5vw, 40px) 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,26 +86,27 @@ h4 {
 
 .main__img {
   width: 50%;
-  margin: 40px 0px;
+  margin: clamp(15px, 3vw, 40px) 0px;
 }
 
 .encabezado {
   background-color: #393B50;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  padding: 20px;
+  padding: clamp(10px, 2vw, 20px);
   display: flex;
-  gap: 30px;
+  gap: clamp(10px, 2vw, 30px);
   align-items: center;
   width: 100%;
 }
 
 .encabezado__numero {
   border: 2px solid #fff;
-  width: 70px;
-  height: 70px;
+  width: clamp(50px, 5vw, 70px);
+  height: clamp(50px, 5vw, 70px);
   border-radius: 50%;
-  font-size: 45px;
+  padding: 15px;
+  font-size: clamp(30px, 4vw, 45px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,20 +115,21 @@ h4 {
 }
 
 .encabezado__titulo {
-  font-size: 24px;
+  font-size: clamp(18px, 3vw, 24px);
 }
 
 .encabezado__paso {
-  font-size: 20px;
+  font-size: clamp(15px, 4vw, 20px);
   font-weight: 200;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 98%;
+  max-width: 580px;
   align-items: center;
-  padding: 15px 30px;
+  padding: clamp(5px, 1vw, 15px) clamp(10px, 2vw, 30px) 20px;
   gap: 15px;
 }
 
@@ -141,7 +145,7 @@ h4 {
   padding: 18px 15px 2px 20px;
   border-radius: 50px;
   color: #9A9AA0;
-  font-size: 16px;
+  font-size: clamp(12px, 3vw, 16px);
 }
 .form__input:focus {
   outline: 1px solid #9A9AA0;
@@ -152,7 +156,7 @@ h4 {
   top: 49%;
   left: 20px;
   transform: translateY(-50%);
-  font-size: 16px;
+  font-size: clamp(12px, 3vw, 16px);
   color: #9A9AA0;
   pointer-events: none;
   transition: 0.175s ease-out;
@@ -171,7 +175,7 @@ h4 {
   width: 20px;
   height: 20px;
   border: none;
-  top: 15px;
+  top: 28%;
   right: 15px;
   background-color: transparent;
   cursor: pointer;
@@ -180,8 +184,9 @@ h4 {
 }
 
 .btn__container {
-  padding: 30px;
-  width: 80%;
+  padding: clamp(10px, 3vw, 30px);
+  width: 90%;
+  max-width: 556px;
   display: flex;
   gap: 10px;
 }
@@ -191,7 +196,7 @@ h4 {
   padding: 10px 20px;
   border-radius: 50px;
   background-color: #393B50;
-  font-size: 16px;
+  font-size: clamp(12px, 3vw, 16px);
   border: none;
   cursor: pointer;
   display: flex;
@@ -205,46 +210,6 @@ h4 {
   background-color: #EAA79F;
 }
 
-#config__header {
-  background-color: #EAA79F;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px 0px;
-  width: 100%;
-}
-#config__header nav {
-  display: flex;
-  gap: 25px;
-}
-#config__header nav a {
-  padding: 10px;
-  border: 2px solid #F4F4F4;
-  border-radius: 50px;
-  width: 175px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#config__header nav a .fa {
-  font-size: 24px;
-}
-#config__header nav a:hover {
-  color: #EAA79F;
-  background-color: #F4F4F4;
-}
-#config__header nav a:hover i {
-  color: #EAA79F;
-}
-#config__header nav .header__redes {
-  width: 50px;
-}
-
-.header__logo--container {
-  width: 250px;
-}
-
 .pasos {
   display: flex;
   flex-direction: column;
@@ -253,7 +218,8 @@ h4 {
 }
 
 .pasos__img {
-  width: 300px;
+  width: 50%;
+  max-width: 300px;
   margin-top: 25px;
 }
 
@@ -264,14 +230,62 @@ h4 {
   width: 100%;
 }
 
+.paso0 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "title img" "texto img" "boton img";
+  padding: 75px 50px;
+  padding: clamp(25px, 5vw, 75px) clamp(20px, 5vw, 50px);
+}
+@media only screen and (max-width: 990px) {
+  .paso0 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "img" "title" "texto" "boton";
+    gap: 15px;
+  }
+}
+.paso0 .btn {
+  grid-area: boton;
+}
+
+.paso0__img {
+  grid-area: img;
+}
+@media only screen and (max-width: 990px) {
+  .paso0__img {
+    width: 60%;
+    justify-self: center;
+  }
+}
+
+.paso0__titulo {
+  color: #EAA79F;
+  grid-area: title;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
+}
+@media only screen and (max-width: 990px) {
+  .paso0__titulo {
+    text-align: center;
+  }
+}
+
 .paso2__container {
   display: grid;
   align-items: center;
-  margin-top: 30px;
+  margin-top: clamp(8px, 2vw, 40px);
   width: 80%;
-  padding: 40px;
+  padding: clamp(7px, 2vw, 30px);
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "file title" "file texto";
+}
+@media only screen and (max-width: 990px) {
+  .paso2__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "texto" "file";
+    gap: 15px;
+    justify-items: center;
+  }
 }
 
 .paso2__file {
@@ -283,23 +297,31 @@ h4 {
 .paso2__titulo {
   grid-area: title;
   color: #EAA79F;
-  font-size: 24px;
+  font-size: clamp(18px, 3vw, 24px);
 }
 
 .pasos__texto {
   color: #9A9AA0;
-  font-size: 18px;
+  font-size: clamp(12px, 3vw, 15px);
   grid-area: texto;
+}
+@media only screen and (max-width: 990px) {
+  .pasos__texto {
+    text-align: center;
+  }
 }
 .pasos__texto span {
   color: #9A9AA0;
-  font-size: 14px;
+  font-size: clamp(10px, 3vw, 12px);
 }
 
 .paso3 {
   width: 80%;
-  padding: 40px;
-  gap: 30px;
+  padding: clamp(11px, 3vw, 40px);
+  gap: clamp(10px, 3vw, 30px);
+}
+.paso3 .pasos__img {
+  width: 70%;
 }
 
 .dias {
@@ -399,9 +421,6 @@ h4 {
 .tiempo__option {
   color: #EAA79F;
   background-color: #fff;
-}
-.tiempo__option:hover {
-  font-size: 50px;
 }
 
 .resumen {
@@ -556,6 +575,10 @@ h4 {
   border: none;
   outline: none;
   color: #EAA79F;
+}
+
+.paso4, .paso5 {
+  display: none;
 }
 
 .paso3__mapa {

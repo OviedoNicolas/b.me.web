@@ -1,5 +1,3 @@
-const { application } = require("express");
-
 let mainUrlApi = "http://localhost:3002/";
 let mainData = []
 
@@ -336,7 +334,13 @@ let btnCargar = document.getElementById("btnCargar");
 
 // Agregar evento al botón "Cargar"
 btnCargar.addEventListener("click", ()=> {
+    //Guarda el valor anterior de categoría para validaciones posteriores
+    let id_categoriaprevia = mainObjetoServicio.id_categoria;
+
+
+
     // Obtener los valores de los campos de entrada
+    let id_categoria = document.getElementById("servicio").value;
     let servicioTitulo = document.getElementById("servicio").value;
     let descripcion = document.getElementById("servDesc").value;
     let tiempoHoras = document.getElementById("tiempoHoras").value;
@@ -344,22 +348,48 @@ btnCargar.addEventListener("click", ()=> {
     let servPrecio = document.getElementById("servPrecio").value;
 
 //   Crear el objeto con los valores capturados
-    let servicio = {
-        id: 0,
-        id_categoria: 99,
-        titulo:servicioTitulo,
-        descripcion: descripcion,
-        tiempo: tiempoHoras + ":" + tiempoMinutos,
-        precio: servPrecio
-    };
 
-    console.log(servicio);
 
-//////////////////////////////////////////////////////////////
-    servicio.id = Math.random();
+    mainObjetoServicio.id_categoria = id_categoria;
+    mainObjetoServicio.titulo = _objReg.servicioTitulo;
+    mainObjetoServicio.descripcion = _objReg.descripcion;
+    mainObjetoServicio.tiempo = _objReg.tiempo;
+    mainObjetoServicio.precio = _objReg.precio;
+
+
+    //API FICTICIA
+    //////////////////////////////////////////////////////////////
+    if (mainObjetoServicio.id === 0) {
+        servicio.id = Math.random();
+    }
 //////////////////////////////////////////////////////////////////
 
 
+
+
+
+    //activar solapa de la categoría que está agregando, modificando o eliminando
+
+
+    if (mainObjetoServicio.id === 0) {//ES UN REGISTRO NUEVO
+
+    }
+    else {//REGISTRO EXISTENTE
+
+    }
+
+
+    //COSAS COMUNES A AMBAS
+
+    console.log(servicio);
+
+    if (id_categoriaprevia != 0 && id_categoriaprevia !=  mainObjetoServicio.id_categoria) {
+
+    }
+
+
+
+    
 
 
 
@@ -381,3 +411,72 @@ arrServiciosCliente.push(
 */
 
 
+
+
+
+
+
+var mainObjetoServicio;
+
+
+
+
+
+function servicioNewOrUpdate(_id, _id_categoria) {
+
+    mainObjetoServicio = {
+        id: _id,
+        id_categoria: _id_categoria,
+        titulo: "",
+        descripcion: "",
+        tiempo: "",
+        precio: 0,
+        // datonuevo: 9
+    }
+
+    if (_id > 0) { //REGISTRO EXISTENTE
+        for (i=0; i<arrServiciosCliente.length; i++) {
+            if (arrServiciosCliente[i].id_categoria === _id_categoria) {
+
+                for (zz=0; zz<arrServiciosCliente[i].arrServicios.length; zz++) {
+                    if (arrServiciosCliente[i].arrServicios[zz].id === _id) {
+                        let _objReg = arrServiciosCliente[i].arrServicios[zz];
+
+                        mainObjetoServicio.titulo = _objReg.titulo;
+                        mainObjetoServicio.descripcion = _objReg.descripcion;
+                        mainObjetoServicio.tiempo = _objReg.tiempo;
+                        mainObjetoServicio.precio = _objReg.precio;
+
+                        break;
+                    }
+                }
+            }
+        }
+        mainObjetoServicio.id_categoria = id_categoria;
+
+
+    }
+    //rellenás los objetos del formulario con el objeto el mainObjetoServicio
+    document.getElementById("servicio").value = mainObjetoServicio.titulo;
+    document.getElementById("servicio").value = mainObjetoServicio.titulo;
+
+}
+
+
+
+
+
+
+
+
+
+
+mainObjetoServicio = {
+    id: _id,
+    id_categoria: _id_categoria,
+    titulo: "",
+    descripcion: "",
+    tiempo: "",
+    precio: 0,
+    // datonuevo : 9
+}

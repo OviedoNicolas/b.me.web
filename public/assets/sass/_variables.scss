@@ -6,3 +6,39 @@ $claro: #F4F4F4;
 $blanco: #fff;
 
 $fuente_principal: "Poppins" , sans-serif;
+
+$titulo-xl: clamp(35px , 5vw , 70px);
+$titulo-l: clamp(18px, 3vw, 24px);
+$titulo-m: clamp(14px, 3vw, 18px);
+$titulo-s: clamp(12px, 3vw, 16px);
+$titulo-xs: 1px;
+
+$texto-xl: clamp(15px, 4vw , 20px);
+$texto-l: clamp(12px, 3vw, 15px);
+$texto-m: 1px;
+$texto-s: 1px;
+$texto-xs: 1px;
+$texto-span: clamp(10px, 3vw, 12px)
+
+
+// 70 clamp(40px , 5vw , 70px) h1 titulo 1 titulo Xl
+
+// 45   p numero del encabezado 1 (solo al elemento)
+
+// 24 clamp(18px, 3vw, 24px) h2 p titulo 1 titulo L
+
+// 20 p span texto encabezado 1  texto Xl
+
+// 18 p nombre de los dias h3  
+
+// 16 clamp(12px, 3vw, 16px) h4 input label btn select categoria titulo
+
+// 15 texto pasos clamp(11.5px, 3vw, 15px)
+
+// 14 span p desde/hasta resumen texto pasos
+
+// 12 label 1
+
+// 10 descripcion en pestañas
+
+// h3 no tiene tamaño, son aprox 18px
