@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Info</title>
+</head>
+<body class="body">
+    <header id="config__header">
+        <div class="header__logo--container">
+            <img src="assets/img/Logo blanco-10.svg" alt="">
+        </div>
+        <nav>
+            <a href="">INGRESAR</a>
+            <a href="">CREAR AHORA</a>
+            <a class="header__redes" href="">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a class="header__redes" href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="header__redes" href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+        </nav>
+    </header>
+    <section class="banner">
+        <div class="background">
+            <img src="assets/img/slide-1.jpg" alt="">
+        </div>
+        <div class="banner__main">
+            <h2 class="banner__titulo">Tu catálogo virtual de servicios de belleza</h2>
+            <p class="banner__texto">¿Ofreces manicuría, peluquería, depilación, masajes, etc.? ¿Tenes un establecimiento? ¿Brindas atención en tu domicilio? ¿Hacés visitas particulares?</p>
+            <button class="btn">Crear ahora</button>
+        </div>
+    </section>
+    <section class="servicios">
+        <h3 class="info__titulo">¿Qué te ofrecemos?</h3>
+        <div class="servicios__main">
+            <div class="servicios__imgCont">
+                <div class="servicios__img">
+                    <img src="assets/img/Galería.svg" alt="">
+                </div>
+                <p class="servicios__texto">Promocioná tus trabajos con tu galería de fotos</p>
+            </div>
+            <div class="servicios__imgCont">
+                <div class="servicios__img">
+                    <img src="assets/img/Agenda.svg" alt="">
+                </div>
+                <p class="servicios__texto">Optimizá tu agenda en base a la duración de cada servicio</p>
+            </div>
+            <div class="servicios__imgCont">
+                <div class="servicios__img">
+                    <img src="assets/img/Servicios1.svg" alt="">
+                </div>
+                <p class="servicios__texto">Añadí los servicios que ofrecés y modificalos cuando quieras</p>
+            </div>
+        </div>
+    </section>
+    <section class="incluye">
+        <h3 class="info__titulo">¿Qué incluye?</h3>
+        <div class="incluye__main">
+            <div class="incluye__mock">
+                <img src="assets/img/Mockup celular-06.svg" alt="">
+            </div>
+            <div class="incluye__cont turnos">
+                <div class="incluye__icono">
+                    <img src="assets/img/turnos.svg" alt="">
+                </div>
+                <p class="incluye__texto">Agenda de turnos automatizada desde tu celular</p>
+            </div>
+            <div class="incluye__cont navegador">
+                <div class="incluye__icono">
+                    <img src="assets/img/navegador.svg" alt="">
+                </div>
+                <p class="incluye__texto">Accesible desde cualquier navegador, desde la PC o celular</p>
+            </div>
+            <div class="incluye__cont ubicacion">
+                <div class="incluye__icono">
+                    <img src="assets/img/ubicacion.svg" alt="">
+                </div>
+                <p class="incluye__texto">Conseguí potenciales clientes cuando busquen los servicios que ofrecés en base a tu ubicación</p>
+            </div>
+            <div class="incluye__cont promocion">
+                <div class="incluye__icono">
+                    <img src="assets/img/promocion.svg" alt="">
+                </div>
+                <p class="incluye__texto">Promocionate en redes sociales con tu propia dirección beauting.me/tu-marca-o-nombre</p>
+            </div>
+        </div>
+    </section>
+    <section class="contacto">
+        <div class="background">
+            <img src="assets/img/Bacground-2.jpg" alt="">
+        </div>
+        <h3 class="info__titulo">Contactanos</h3>
+        <div class="contacto__main">
+            <form class="form"
+            autoComplete="off">
+                <div class="form__container">
+                    <input
+                    class="form__input" 
+                    type="text"
+                    name="nombre"
+                    placeholder=" "
+                    id="inp_nom">
+                    <label for="nombre" class="form__label">Nombres</label>
+                </div>
+                <div class="form__container">
+                    <input
+                    class="form__input" 
+                    type="text"
+                    name="apellido"
+                    placeholder=" "
+                    id="inp_ape">
+                    <label for="apellido" class="form__label">Apellido</label>
+                </div>
+                <div class="form__container">
+                    <input
+                    class="form__input" 
+                    type="email"
+                    name="email"
+                    placeholder=" "
+                    id="inp_em">
+                    <label for="email" class="form__label">E-mail</label>
+                </div>
+                <textarea class="categoria__textarea" name="" cols="30" rows="5">MENSAJE</textarea>
+                <button class="btn unselectable" onclick=click_registro() type="button">
+                    ENVIAR
+                </button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="footer__logo">
+                <img src="assets/img/Logo blanco-10.svg" alt="">
+            </div>
+            <div class="footer__redesCont">
+                <a class="footer__redes" href="">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+                <a class="footer__redes" href="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a class="footer__redes" href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
