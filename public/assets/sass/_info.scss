@@ -17,7 +17,7 @@
 
 .banner__titulo{
     color: $rosa_principal;
-    font-size: clamp(22px, 3vw, 40px);
+    font-size: clamp(28px, 3vw, 40px);
 }
 
 .banner__texto{
@@ -34,23 +34,27 @@
 }
 
 .info__titulo{
-    font-size: clamp(22px, 3vw, 40px);
+    font-size: clamp(36px, 5vw, 40px);
 }
 
 .servicios__main{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
     margin-top: 60px;
+    gap: 24px;
+    padding: 0px 20px;
 }
 
 .servicios__imgCont{
     width: 20%;
+    min-width: 250px;
 }
 
 .servicios__texto{
     color: $gris;
-    font-size: $texto-xl;
+    font-size: $texto-xs;
     text-align: center;
 }
 
@@ -62,25 +66,54 @@
     margin-top: 80px;
     padding-top: 60px;
     background-color: $claro;
+    gap: 30px;
 }
 
 .incluye__main{
     display: grid;
-    width: 80%;
-    align-items: center;
+    grid-template-columns: 1fr .5fr 1fr;
+    width: 100%;
     gap: 0px 60px;
+    align-items: center;
     grid-template-areas: "turnos mock navegador"
                         "ubicacion mock promocion";
+
+    @media only screen and (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "mock mock"
+                            "turnos navegador"
+                            "ubicacion promocion";
+    }
+
+    @media only screen and (max-width: 720px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "mock"
+                            "turnos" 
+                            "navegador"
+                            "ubicacion"
+                            "promocion";
+    }
 }
 
 .incluye__mock{
     grid-area: mock;
+    width: 300px;
+    justify-self: center;
 }
 
 .incluye__cont{
-    width: 50%;
+    width: 300px;
     display: flex;
     flex-direction: column;
+    margin: 30px 0px;
+
+    @media only screen and (max-width: 1024px) {
+        align-items: center;
+    }
+
+    @media only screen and (max-width: 720px) {
+        justify-self: center;
+    }
 }
 
 .turnos{
@@ -89,6 +122,14 @@
     text-align: end;
     display: flex;
     align-items: end;
+
+    @media only screen and (max-width: 1024px) {
+        align-items: center;
+    }
+    
+    @media only screen and (max-width: 720px) {
+        justify-self: center;
+    }
 }
 
 .navegador{
@@ -110,7 +151,11 @@
 
 .incluye__texto{
     color: $gris;
-    font-size: $texto-xl;
+    font-size: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        text-align: center;
+    }
 }
 
 .contacto{
@@ -131,10 +176,12 @@
     border-radius: 25px;
     padding: clamp(20px, 5vw, 40px);
     display: flex;
+    align-items: center;
     margin-top: 60px;
     flex-direction: column;
     box-shadow: 1px 3px 10px #9A9AA0;
-    width: 35%;
+    max-width: 670px;
+    width: 90%;
     gap: 30px;
 
     .categoria__textarea{

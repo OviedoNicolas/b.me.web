@@ -17,7 +17,7 @@ $texto-xl: clamp(15px, 4vw , 20px);
 $texto-l: clamp(12px, 3vw, 15px);
 $texto-m: 1px;
 $texto-s: 1px;
-$texto-xs: 1px;
+$texto-xs: clamp(14px, 3vw, 22px);
 $texto-span: clamp(10px, 3vw, 12px)
 
 

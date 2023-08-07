@@ -1,0 +1,128 @@
+.body__tienda{
+    background-color: $claro;
+
+    .main__container{
+        background-color: $blanco;
+        padding: 50px;
+    }
+}
+
+.tienda{
+    width: 90%;
+    max-width: 1240px;
+}
+
+.tienda__perfil{
+    position: relative;
+    display: flex;
+}
+
+.editar__foto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background-color: $azul;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.tienda__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.tienda__nombre{
+    color: $rosa_principal;
+}
+
+.tienda__titulo{
+    color: $rosa_principal;
+    align-self: flex-start;
+}
+
+.tienda__descripcion{
+    color: $azul;
+    font-weight: 900;
+}
+
+.tienda__icono{
+    color: $rosa_principal;
+    font-size: 16px;
+    text-align: center;
+    width: 30px;
+}
+
+.tienda__texto{
+    color: $gris;
+}
+
+.contacto__info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tienda__contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tienda__btnCont{
+    display: flex;
+    align-self: flex-start;
+    gap: 20px;
+}
+
+.separador{
+    width: 100%;
+    height: 2px;
+    background-color: $claro;
+    margin: 20px 0px 30px;
+}
+
+.tienda__btn{
+    width: 120px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    background-color: $blanco;
+    font-size: $titulo-s;
+    color: $rosa_principal;
+    border: 1px solid $rosa_principal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    outline: none;
+
+    &:hover{
+        background-color: $azul;
+        border: none;
+        color: $blanco;
+    }
+}
+
+.tienda__servCont{
+    display: flex;
+    background-color: $claro;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 30px;
+    gap: 20px;
+}
+
+.servicios__precio{
+    color: $azul;
+}
+
+.servicio__imgCont{
+    width: 50px;
+    background-color: aqua;
+}

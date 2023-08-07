@@ -205,6 +205,12 @@ h4{
     justify-content: center;
     gap: 10px;
     outline: none;
+
+    &:active{
+        color: $azul;
+        background-color: $blanco;
+        outline: 2px solid $azul;
+    }
 }
 
 .btn--rosa{
