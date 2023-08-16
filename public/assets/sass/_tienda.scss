@@ -9,12 +9,44 @@
 
 .tienda{
     width: 90%;
-    max-width: 1240px;
+    max-width: 1024px;
 }
 
 .tienda__perfil{
     position: relative;
     display: flex;
+    overflow: hidden;
+    height: 500px;
+}
+
+.tienda__portada{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+
+    .editar__foto{
+        top: 15px;
+        right: 15px;
+    }
+}
+
+.tienda__fotoCont{
+    position: relative;
+    width: 140px;
+    margin-bottom: 10px;
+
+    .editar__foto{
+        right: 5px;
+        bottom: 5px;
+    }
+}
+
+.tienda__foto{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
 }
 
 .editar__foto{
@@ -32,9 +64,12 @@
 
 .tienda__info{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-around;
     width: 90%;
+    position: absolute;
+    bottom: 13%;
+    z-index: 10;
 }
 
 .tienda__nombre{
@@ -72,6 +107,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
 }
 
 .tienda__btnCont{
@@ -118,11 +154,93 @@
     gap: 20px;
 }
 
+.servicio__info{
+    position: relative;
+
+    .fa-pencil{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-size: 20px;
+    }
+}
+
+.servicio__img{
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    width: 156px;
+    position: relative;
+
+    .editar__foto{
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
 .servicios__precio{
     color: $azul;
 }
 
-.servicio__imgCont{
-    width: 50px;
-    background-color: aqua;
+.tienda__ubicacion{
+    position: relative;
+
+    .fa-pencil{
+        position: absolute;
+        top: 60px;
+        right: 55px;
+        font-size: 20px;
+    }
+}
+
+.tienda__ubicacionCont{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.tienda__direccion{
+    margin: 20px;
+
+    .tienda__texto{
+        margin-left: 30px
+    }
+}
+
+.tienda__sucursalCont{
+    display: flex;
+    align-items: center;
+}
+
+.tienda__mapaCont{
+    width: 475px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 1px 4px $gris;
+}
+
+.tienda__galeriaCont{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.tienda__galeriaFoto{
+    width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    aspect-ratio: 1/1;
+
+    img{
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .editar__foto{
+        bottom: 10px;
+        right: 10px;
+    }
 }
