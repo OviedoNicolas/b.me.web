@@ -1058,7 +1058,7 @@ label img:hover {
   justify-content: space-around;
   width: 90%;
   position: absolute;
-  bottom: 13%;
+  bottom: 15%;
   z-index: 10;
 }
 
@@ -1085,6 +1085,8 @@ label img:hover {
 
 .tienda__texto {
   color: #9A9AA0;
+  width: 90%;
+  text-align: justify;
 }
 
 .contacto__info {
@@ -1102,6 +1104,7 @@ label img:hover {
 
 .tienda__btnCont {
   display: flex;
+  flex-wrap: wrap;
   align-self: flex-start;
   gap: 20px;
 }
@@ -1141,6 +1144,17 @@ label img:hover {
   margin-top: 30px;
   padding: 30px;
   gap: 20px;
+}
+@media only screen and (max-width: 720px) {
+  .tienda__servCont {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .servicio__imgCont {
+    align-self: center;
+  }
 }
 
 .servicio__info {
@@ -1184,6 +1198,11 @@ label img:hover {
   gap: 60px;
   align-items: center;
 }
+@media only screen and (max-width: 720px) {
+  .tienda__ubicacionCont {
+    flex-direction: column;
+  }
+}
 
 .tienda__direccion {
   margin: 20px;
@@ -1213,7 +1232,8 @@ label img:hover {
 }
 
 .tienda__galeriaFoto {
-  width: 200px;
+  width: 45%;
+  max-width: 200px;
   overflow: hidden;
   border-radius: 10px;
   position: relative;

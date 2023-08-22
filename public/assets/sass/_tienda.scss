@@ -68,7 +68,7 @@
     justify-content: space-around;
     width: 90%;
     position: absolute;
-    bottom: 13%;
+    bottom: 15%;
     z-index: 10;
 }
 
@@ -95,6 +95,8 @@
 
 .tienda__texto{
     color: $gris;
+    width: 90%;
+    text-align: justify;
 }
 
 .contacto__info{
@@ -112,6 +114,7 @@
 
 .tienda__btnCont{
     display: flex;
+    flex-wrap: wrap;
     align-self: flex-start;
     gap: 20px;
 }
@@ -152,6 +155,16 @@
     margin-top: 30px;
     padding: 30px;
     gap: 20px;
+
+    @media only screen and (max-width: 720px){
+        flex-direction: column;
+    }
+}
+
+.servicio__imgCont{
+    @media only screen and (max-width: 720px){
+        align-self: center;
+    }
 }
 
 .servicio__info{
@@ -197,6 +210,10 @@
     display: flex;
     gap: 60px;
     align-items: center;
+
+    @media only screen and (max-width: 720px){
+        flex-direction: column;
+    }
 }
 
 .tienda__direccion{
@@ -228,7 +245,8 @@
 }
 
 .tienda__galeriaFoto{
-    width: 200px;
+    width: 45%;
+    max-width: 200px;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
